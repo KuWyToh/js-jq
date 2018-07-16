@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1> This is a demonstration of how global variables are affected in code.</h1>
+
+<p id = "first"></p>
+<p id = "mod1"></p>
+<p id = "mod2"></p>
+
+<script>
+    var global = 300;
+    document.getElementById("first").innerHTML = "The global variable is the number " +  global.toString()
+    
+    function mod1(){
+        global = global * 123;
+    }
+    
+    function mod2(){
+        global = global / 100;
+    }
+    
+    mod1();
+    document.getElementById("mod1").innerHTML = "After executing the mod1() function, global is now " + global.toString() 
+    mod2();
+    document.getElementById("mod2").innerHTML = "After executing the mod2() function, which was done after executing mod1(), global is now " + global.toString()
+</script>
+
+</body>
+
+</html>

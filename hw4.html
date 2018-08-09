@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>Trying out arrays</head>
+    <p id = "first"></p>
+    <p id = "sum"></p>
+    <body>
+        <script>
+            var length = prompt("Enter desired size");
+            length = parseInt(length);
+            var array = new Array(length);
+            document.getElementById("first").innerHTML = "The length of the array is " + array.length.toString();
+            var count = 0;
+            while(count < array.length){
+                var entry = prompt("Enter whatever number");
+                array[count] = entry;
+                count += 1;
+            }
+            
+            count = 0;
+            var sum = 0;
+             while(count < array.length){
+                sum += parseInt(array[count]);
+                count += 1
+             }
+            document.getElementById("sum").innerHTML = "The sum of the numbers you have entered is " + sum.toString();
+        
+        </script>
+    </body>
+</html>
